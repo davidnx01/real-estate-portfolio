@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import styles from "/styles/hero.module.css"
-import Logo from '../Components/Logo'
-import { AiOutlineUser } from "react-icons/ai"
-import { MdOutlineKeyboardArrowRight } from "react-icons/md"
-import { navLinks } from '../Constants/navLinks'
-import { RiCloseLine, RiMenu3Fill } from "react-icons/ri";
+import DesktopNavigation from '../Components/Navigation/DesktopNavigation'
+import MobileNavigation from '../Components/Navigation/MobileNavigation'
+import styles from "../../styles/hero.module.css"
+import { BsHouses } from "react-icons/bs"
+import { GrFormDown } from "react-icons/gr"
 
 const Hero = () => {
 
@@ -13,94 +12,80 @@ const Hero = () => {
 
   return (
     <>
-      <nav className={styles.navbar}>
-        <div className={styles.navigation_left_side}>
+      <DesktopNavigation 
+        activeMenu={activeMenu}
+        setActiveMenu={setActiveMenu}
+        setToggleMenu={setToggleMenu}
+      />
 
-          <Logo />
+      <MobileNavigation 
+        toggleMenu={toggleMenu}
+        setToggleMenu={setToggleMenu}
+        setActiveMenu={setActiveMenu}
+        activeMenu={activeMenu}
+      />
 
-          <NavigationMenu 
-            activeMenu={activeMenu} 
-            setActiveMenu={setActiveMenu}
+      <div className={styles.header_content}>
+        <h1>
+          Nájdite si svoj ideálny domov s našou 
+          realitnou kanceláriou
+        </h1>
+
+        <p>
+          Naša realitná kancelária ponúka profesionálny a 
+          individuálny prístup pre predaj alebo kúpu nehnuteľností 
+          a zabezpečíme vám najlepšie riešenie.
+        </p>
+      </div>
+
+      <div className={styles.header_form}>
+        <div className={styles.header_form_top_part}>
+          <div className={styles.header_form_top_bar}>
+            Predať
+          </div>
+
+          <div className={styles.header_form_top_bar}>
+            Prenajať
+          </div>
+        </div>
+
+        <form className={styles.form}>
+          <div className={styles.form_left_side}>
+            <div className={styles.select_wrap}>
+
+              <BsHouses className={styles.select_left_icon} />
+
+              <select className={styles.select}>
+                <option disabled selected value="">Typ nehnuteľnosti</option>
+                <option>Byt</option>
+                <option>Rodinný dom</option>
+                <option>Komerčná Nehnuteľnosť</option>
+                <option>Priemyselná Nehnuteľnosť</option>
+              </select>
+
+              <GrFormDown className={styles.select_right_icon} />
+
+            </div>
+
+
+            <div className={styles.divider}></div>
+
+            <div className={styles.form_search}>
+              <input 
+                type="text" 
+                placeholder='Hľadať podľa lokality'
+              />
+            </div>
+          </div>
+
+          <input 
+            type="button" 
+            value="Vyhľadať"
           />
-        </div>
-
-        <div className={styles.navigation_right_side}>
-          <NavigationButtons />
-        </div>
-      </nav>
-
-      <nav className={styles.mobile_navbar}>
-        <Logo />
-
-        <div className={styles.mobile_navbar_menu}>
-          {toggleMenu
-            ? <RiCloseLine 
-                size={30} color="white" onClick={() => setToggleMenu(false)} cursor="pointer" 
-              />
-            : <RiMenu3Fill 
-                size={26} color="white" onClick={() => setToggleMenu(true)} cursor="pointer"
-              />
-          }
-
-          {toggleMenu && (
-            <>
-              <div className={styles.mobile_menu}>
-                <NavigationMenu 
-                  activeMenu={activeMenu} 
-                  setActiveMenu={setActiveMenu}
-                  setToggleMenu={setToggleMenu}
-                />
-                <div className={styles.divider}></div>
-                <NavigationButtons />
-              </div>
-            </>
-          )
-          }
-        </div>
-      </nav>
+        </form>
+      </div>
     </>
   )
 }
 
 export default Hero
-
-const NavigationMenu = ({ activeMenu, setActiveMenu, setToggleMenu }) => {
-  return (
-    <>
-      <ul>
-        {navLinks.map((item, index) => (
-          <li key={index}>
-            <a 
-              key={item.title} 
-              href={item.id}
-              onClick={() => setActiveMenu(index) || setToggleMenu(false)}
-              className=
-              {activeMenu === index
-                ? styles.active
-                : ""
-              }
-            >
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </>
-  )
-}
-
-const NavigationButtons = () => {
-  return (
-    <>
-      <a href="#" className={styles.navigation_right_side__login}>
-        <AiOutlineUser size={20} />
-        Prihlásiť sa
-      </a>
-
-      <a href="#" className={styles.navigation_right_side__cta}>
-        Pridať Nehnuteľnosť
-        <MdOutlineKeyboardArrowRight size={20} />
-      </a>
-    </>
-  )
-}
