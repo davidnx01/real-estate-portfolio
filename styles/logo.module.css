@@ -1,0 +1,30 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1em;
+}
+
+.logo_typography {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.logo_typography p:last-child {
+    font-size: .625rem;
+    font-weight: 400;
+    letter-spacing: 1.75px;
+}
