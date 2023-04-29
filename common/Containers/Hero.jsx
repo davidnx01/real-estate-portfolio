@@ -3,9 +3,7 @@ import styles from "/styles/hero.module.css"
 import Logo from '../Components/Logo'
 import { AiOutlineUser } from "react-icons/ai"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
-
-
-
+import { navLinks } from '../Constants/navLinks'
 
 const Hero = () => {
 
@@ -46,56 +44,22 @@ const NavigationMenu = ({ activeMenu, setActiveMenu }) => {
   return (
     <>
       <ul>
-        <li>
-          <a 
-            href="#home"
-            className={activeMenu === 0
-              ? styles.active
-              : ""
-            }
-            onClick={() => setActiveMenu(0)}
-          >Domov</a>
-        </li>
-        <li>
-          <a 
-            href="#bestOffers"
-            className={activeMenu === 1
-              ? styles.active
-              : ""
-            }
-            onClick={() => setActiveMenu(1)}
-          >Najlepšie Ponuky</a>
-        </li>
-        <li>
-          <a 
-            href="#about"
-            className={activeMenu === 2
-              ? styles.active
-              : ""
-            }
-            onClick={() => setActiveMenu(2)}
-          >O Nás</a>
-        </li>
-        <li>
-          <a 
-            href="#services"
-            className={activeMenu === 3
-              ? styles.active
-              : ""
-            }
-            onClick={() => setActiveMenu(3)}
-          >Služby</a>
-        </li>
-        <li>
-          <a 
-            href="#agents"
-            className={activeMenu === 4
-              ? styles.active
-              : ""
-            }
-            onClick={() => setActiveMenu(4)}
-          >Agenti</a>
-        </li>
+        {navLinks.map((item, index) => (
+          <li key={index}>
+            <a 
+              key={item.title} 
+              href={item.id}
+              onClick={() => setActiveMenu(index)}
+              className=
+              {activeMenu === index
+                ? styles.active
+                : ""
+              }
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
       </ul>
     </>
   )
