@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import DesktopNavigation from '../Components/Navigation/DesktopNavigation'
 import MobileNavigation from '../Components/Navigation/MobileNavigation'
 import styles from "../../styles/hero.module.css"
-import { BsHouses } from "react-icons/bs"
+import { BsHouses, BsSearch } from "react-icons/bs"
 import { GrFormDown } from "react-icons/gr"
 
 const Hero = () => {
 
   const [activeMenu, setActiveMenu] = useState(0);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [formToggle, setFormToggle] = useState(0)
 
   return (
     <>
@@ -40,11 +41,25 @@ const Hero = () => {
 
       <div className={styles.header_form}>
         <div className={styles.header_form_top_part}>
-          <div className={styles.header_form_top_bar}>
+          <div 
+            className={
+              formToggle === 0
+                ? `${styles.header_form_top_bar} ${styles.form_active}`
+                : styles.header_form_top_bar
+            }
+            onClick={() => setFormToggle(0)}
+          >
             Predať
           </div>
 
-          <div className={styles.header_form_top_bar}>
+          <div             
+            className={
+              formToggle === 1
+                ? `${styles.header_form_top_bar} ${styles.form_active}`
+                : styles.header_form_top_bar
+              }
+              onClick={() => setFormToggle(1)}
+            >
             Prenajať
           </div>
         </div>
@@ -63,25 +78,31 @@ const Hero = () => {
                 <option>Priemyselná Nehnuteľnosť</option>
               </select>
 
-              <GrFormDown className={styles.select_right_icon} />
+              <GrFormDown size={23} className={styles.select_right_icon} />
 
             </div>
 
 
             <div className={styles.divider}></div>
 
-            <div className={styles.form_search}>
+
+            <div className={styles.search_wrapper}>
               <input 
                 type="text" 
                 placeholder='Hľadať podľa lokality'
+                className={styles.form_search}
               />
+
+              <BsSearch className={styles.search_icon} />
+
             </div>
           </div>
 
-          <input 
-            type="button" 
-            value="Vyhľadať"
-          />
+            <input 
+              type="button" 
+              value="Vyhľadať"
+              className={styles.form_button}
+            />
         </form>
       </div>
     </>
