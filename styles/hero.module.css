@@ -86,7 +86,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     text-align: center;
-    padding-inline: 1.125rem;
+    padding-inline: 1.5rem;
     padding-block: 0.325rem;
     position: relative;
     font-size: .8rem;
@@ -112,7 +112,7 @@
     top: 50%;
     transform: translate(0, -50%);
     z-index: 5;
-    color: var(--primary-color);
+    color: red;
 }
 
 .divider {
@@ -150,7 +150,6 @@
     opacity: 1 !important;
 }
 
-
 .form_button {
     font-size: 1rem;
     color: white;
@@ -163,4 +162,90 @@
     border-radius: 8px;
     cursor: pointer;
     margin-right: 1.25rem
+}
+
+
+
+
+@media only screen and (max-width: 880px) {
+    .header_form_top_bar {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .divider {
+        display: none;
+    }
+    .form {
+        flex-direction: column;
+        max-width: 420px;
+        padding: 2rem;
+        margin-inline: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .form_left_side {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+    .header_form_top_part {
+        width: 100%;
+        max-width: 420px;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-inline: auto;
+    }
+    .select_wrap, .select {
+        width: 100%;
+        margin: 0;
+        padding-inline: 0;
+        text-align: left;
+        padding-left: 1.325rem;
+
+    }
+    .select, .form_search {
+        padding-block: .75rem;
+    }
+    .search_wrapper {
+        margin-bottom: 1.5rem;
+    }
+    .form_button {
+        width: 100%;
+        max-width: 285px;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .header_content {
+        margin-top: 5rem;
+    }
+    
+    .header_content h1 {
+        font-size: 2rem;
+        color: white;
+        line-height: 1.5em;
+    }
+    
+    .header_content p {
+        color: white;
+        max-width: 940px;
+        margin-inline: auto;
+        padding-inline: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .form {
+        padding: 1rem;
+    }
+    .header_form_top_bar {
+        width: 120px;
+        height: 40px;
+        font-size: .9rem;
+    }
 }

@@ -4,6 +4,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 15rem;
+    padding-bottom: 9rem;
     padding-inline: 1rem;
+}
+
+@media only screen and (max-width: 540px) {
+    .header {
+        padding-bottom: 8.5rem;
+    }
 }

@@ -71,14 +71,14 @@ const Hero = () => {
               <BsHouses className={styles.select_left_icon} />
 
               <select className={styles.select}>
-                <option disabled selected value="">Typ nehnuteľnosti</option>
+                <option disabled selected>Typ nehnuteľnosti</option>
                 <option>Byt</option>
                 <option>Rodinný dom</option>
                 <option>Komerčná Nehnuteľnosť</option>
                 <option>Priemyselná Nehnuteľnosť</option>
               </select>
 
-              <GrFormDown size={23} className={styles.select_right_icon} />
+              <GrFormDown size={20} className={styles.select_right_icon} />
 
             </div>
 
