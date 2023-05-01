@@ -1,9 +1,22 @@
 import React from 'react'
-import "../../styles/agents.module.css"
+import styles from "../../styles/agents.module.css"
+import Heading from '../Components/Heading'
 
 const Agents = () => {
   return (
-    <div>Agents</div>
+    <>
+      <section id='agents'>
+        <Heading 
+          title="Naši Agenti"
+          description="Spoznajte náš tím skúsených realitných agentov, 
+          ktorí Vám pomôžu s kúpou, predajom alebo prenájmom nehnuteľnosti."
+        />
+
+
+
+
+      </section>
+    </>
   )
 }
 
