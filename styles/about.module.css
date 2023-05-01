@@ -10,3 +10,20 @@
     justify-content: flex-start;
     gap: 2.5rem;
 }
+
+.about_cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 2.5rem;
+    transition: .12s ease-in;
+    width: fit-content;
+}
+
+.about_cta:hover {
+    transform: translate(10px, 0);
+}
