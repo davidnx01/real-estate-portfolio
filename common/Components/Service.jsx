@@ -18,7 +18,7 @@ const Service = () => {
 
                 <a className={styles.service_cta}>
                     <HiArrowLongRight size={35} />
-                    Zistiť Viac
+                    Nájsť Dom
                 </a>
             </div>
         ))}

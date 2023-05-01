@@ -66,9 +66,7 @@ section {
     html {
         font-size: 18px !important;
     }
-}
 
-@media only screen and (max-width: 880px) {
     html {
         font-size: 15px !important;
     }

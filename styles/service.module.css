@@ -21,7 +21,7 @@
 }
 
 .service h4 {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
     margin-bottom: .725rem;
     font-weight: 500;
@@ -32,7 +32,7 @@
     opacity: .5;
     font-size: .8rem;
     line-height: 1.75em;
-    margin-bottom: 2.5rem;
+    font-weight: 300;
 }
 
 .service_cta {
@@ -61,9 +61,6 @@
         width: 120px;
         height: 120px;
     }
-}
-
-@media only screen and (max-width: 700px) {
     .service p {
         margin-bottom: 0rem;
         max-width: 550px !important;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "../../styles/services.module.css"
 import Heading from '../Components/Heading'
 import Service from '../Components/Service'
