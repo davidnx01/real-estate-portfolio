@@ -1,8 +1,17 @@
 import React from 'react'
+import styles from "../../styles/benefit.module.css"
 
-const Benefit = () => {
+const Benefit = ({ icon, title, description }) => {
   return (
-    <div>Benefit</div>
+    <>
+        {
+          <div className={styles.benefit}>
+            <img src={icon} alt="Icon" />
+            <h4>{title}</h4>
+            <p>{description}</p>
+        </div>}
+    
+    </>
   )
 }
 

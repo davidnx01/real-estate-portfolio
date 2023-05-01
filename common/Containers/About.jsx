@@ -2,6 +2,7 @@ import React from 'react'
 import "../../styles/about.module.css"
 import Heading from '../Components/Heading'
 import Benefit from '../Components/Benefit'
+import styles from "../../styles/about.module.css"
 
 const About = () => {
   return (
