@@ -8,3 +8,10 @@
     line-height: 1.5em;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 800px) {
+    .heading p {
+        font-size: .85rem;
+        line-height: 1.66em;
+    }
+}
