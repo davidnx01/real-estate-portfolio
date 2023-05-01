@@ -52,3 +52,21 @@
 .service_cta:hover {
     transform: translate(10px, 0);
 }
+
+@media only screen and (max-width: 880px) {
+    .service {
+        padding: 1.5rem 1rem;
+    }
+    .icon {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .service p {
+        margin-bottom: 0rem;
+        max-width: 550px !important;
+        padding-inline: 0.5rem;
+    }
+}
