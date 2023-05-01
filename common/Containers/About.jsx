@@ -17,7 +17,6 @@ const About = () => {
 
         <div className={styles.about_left_side_benefits}>
           <Benefit />
-          <Benefit />
         </div>
       </div>
 

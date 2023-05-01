@@ -1,0 +1,19 @@
+.benefit img{
+    height: 100px;
+    margin-bottom: 1.125rem;
+}
+
+.benefit h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--dark-primary-color);
+    margin-bottom: 1rem;
+}
+
+.benefit p {
+    font-size: .8rem;
+    color: black;
+    opacity: .5;
+    width: 380px;
+    font-weight: 300;
+}

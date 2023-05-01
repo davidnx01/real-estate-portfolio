@@ -7,6 +7,6 @@ export const benefitConts = [
     {
         icon: "/platby.svg",
         title: "Bezpečná Platba",
-        description: "Vďaka nášmu systému bezpečnej platby máte istotu, že Vaše financie sú chránené pred podvodmi."
+        description: "S našou bezpečnou platbou s minimom rizík chránime Vaše finančné transakcie."
     }
 ]
