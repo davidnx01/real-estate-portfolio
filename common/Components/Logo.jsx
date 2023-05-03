@@ -12,7 +12,7 @@ const Logo = () => {
         />
 
         <div className={styles.logo_typography}>
-          <p>EsTATE</p>
+          <p>ESTATE</p>
           <p>PORTFOLIO</p>
         </div>
       </a>

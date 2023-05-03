@@ -8,7 +8,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"
 const Agents = () => {
   return (
     <>
-      <section id='agents'>
+      <section id='agents' className={styles.agents_section}>
         <Heading 
           title="Naši Agenti"
           description="Spoznajte náš tím skúsených realitných agentov, 
@@ -33,13 +33,13 @@ const Agents = () => {
                 <h4>{agent.name}</h4>
                 <div className={styles.agent_bottom_part_row}>
                   <p>{agent.job}</p>
-                </div>
 
-                <div className={styles.agent_socials}>
-                  <FaFacebookF />
-                  <FaLinkedinIn />
-                  <RiInstagramFill />
-                  <FaTwitter />
+                  <div className={styles.agent_socials}>
+                    <FaFacebookF size={17} cursor="pointer" />
+                    <FaLinkedinIn cursor="pointer" />
+                    <RiInstagramFill cursor="pointer" />
+                    <FaTwitter cursor="pointer" />
+                  </div>
                 </div>
               </div>
             </div>
