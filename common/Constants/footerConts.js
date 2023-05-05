@@ -1,22 +1,29 @@
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineWifi } from "react-icons/md";
+
 export const footerContent = [
     {
-        link: "Domov",
-        id: "home"
+        linkLink: "Domov",
+        idLink: "home",
+        linkContact: <FaPhoneAlt /> + "+421 919 999 999",
+        linkIcon: <RiFacebookFill />
     },
     {
-        link: "Najlepšie ponuky",
-        id: "bestOffers"
+        linkLink: "Najlepšie ponuky",
+        idLink: "bestOffers",
+        linkContact: <MdOutlineWifi /> + "www.webdavid.sk",
     },
     {
-        link: "O Nás",
-        id: "aboutus"
+        linkLink: "O Nás",
+        idLink: "aboutus",
+        linkContact: <BsEnvelopeOpen /> + "info@webdavid.sk",
     },
     {
-        link: "Agenti",
-        id: "agents"
+        linkLink: "Agenti",
+        idLink: "agents"
     },
     {
-        link: "Kontakt",
-        id: "contact"
+        linkLink: "Kontakt",
+        idLink: "contact"
     },
 ]
