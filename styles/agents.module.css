@@ -13,11 +13,11 @@
     justify-content: space-between;
     gap: 0.5rem;
     margin-top: 2.5rem;
+    flex-wrap: wrap;
 }
 
 .agent_box {
-    max-width: 322px;
-    width: 100%;
+    flex-basis: 23%;
     background: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -52,7 +52,7 @@
     left: 0;
     bottom: 20px;
     width: 200px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.8);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -61,7 +61,7 @@
 
 .experience p {
     color: var(--primary-color);
-    font-size: .675rem;
+    font-size: .75rem;
     font-weight: 300;
     text-align: right;
 }
@@ -99,4 +99,34 @@
     justify-content: flex-end;
     gap: 0.625rem;
     color: var(--primary-color);
+}
+
+@media only screen and (max-width: 1070px) {
+    .agents_wrap {
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .agent_box {
+        flex-basis: 320px;
+        max-width: 330px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .agent_box {
+        flex-basis: 46%;
+        max-width: 450px;
+    }
+
+    .experience {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .agents_wrap {
+        flex-direction: column;
+    }
 }
