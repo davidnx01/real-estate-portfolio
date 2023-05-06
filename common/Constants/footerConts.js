@@ -24,13 +24,13 @@ export const footerNavLinks = [
 
 export const footerContactLinks = [
     {
-        info: <FaPhoneAlt /> + "+421 919 999 999",
+        infoIcon: <FaPhoneAlt />, infoText: "+421 919 999 999",
     },
     {
-        info: <MdOutlineWifi /> + "www.webdavid.sk",
+        infoIcon: <MdOutlineWifi />, infoText: "www.webdavid.sk",
     },
     {
-        info: <BsEnvelopeOpen /> + "info@webdavid.sk",
+        infoIcon: <BsEnvelopeOpen />, infoText: "info@webdavid.sk",
     },
 ]
 

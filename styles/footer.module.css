@@ -1,0 +1,29 @@
+#footer {
+    position: relative;
+    width: 100%;
+    background: #181818;
+    margin-top: 15rem;
+}
+
+.footer_wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_left_side p {
+    margin-top: 1rem;
+    font-size: .8rem;
+    opacity: .75;
+    max-width: 420px;
+}
+
+.footer_right_side {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 3.5rem;
+}
