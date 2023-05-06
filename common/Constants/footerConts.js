@@ -4,36 +4,47 @@ import { MdOutlineWifi } from "react-icons/md";
 import { RiFacebookFill, RiInstagramFill } from "react-icons/ri";
 import { RxLinkedinLogo } from "react-icons/rx";
 
-export const footerContent = [
+export const footerNavLinks = [
     {
-        linkLink: "Domov",
-        idLink: "home",
-        linkContact: <FaPhoneAlt /> + "+421 919 999 999",
-        linkIcon: <RiFacebookFill />,
-        idIcon: "www.facebook.sk"
+        link: "Domov", id: "#header",
     },
     {
-        linkLink: "Najlepšie ponuky",
-        idLink: "bestOffers",
-        linkContact: <MdOutlineWifi /> + "www.webdavid.sk",
-        linkIcon: <RxLinkedinLogo />,
-        idIcon: "www.linkedin.com"
+        link: "Najlepšie ponuky", id: "#bestOffers"
     },
     {
-        linkLink: "O Nás",
-        idLink: "aboutus",
-        linkContact: <BsEnvelopeOpen /> + "info@webdavid.sk",
-        linkIcon: <RiInstagramFill />,
-        idIcon: "www.instagram.com"
+        link: "O nás", id: "#aboutUs",
     },
     {
-        linkLink: "Agenti",
-        idLink: "agents",
-        linkIcon: <FaTwitter />,
-        idIcon: "www.twitter.com"
+        link: "Agenti", id: "#agents"
     },
     {
-        linkLink: "Kontakt",
-        idLink: "contact"
+        link: "Kontakt", id: "#contact",
+    },
+]
+
+export const footerContactLinks = [
+    {
+        info: <FaPhoneAlt /> + "+421 919 999 999",
+    },
+    {
+        info: <MdOutlineWifi /> + "www.webdavid.sk",
+    },
+    {
+        info: <BsEnvelopeOpen /> + "info@webdavid.sk",
+    },
+]
+
+export const footerFollowLinks = [
+    {
+        linkIcon: <RxLinkedinLogo />, idIcon: "www.linkedin.com"
+    },
+    {
+        linkIcon: <RiFacebookFill />, idIcon: "www.facebook.sk"
+    },
+    {
+        linkIcon: <RiInstagramFill />, idIcon: "www.instagram.com"
+    },
+    {
+        linkIcon: <FaTwitter />, idIcon: "www.twitter.com"
     },
 ]
