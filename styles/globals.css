@@ -60,6 +60,7 @@ section {
 #wrapper {
     max-width: 1920px;
     margin-inline: auto;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1200px) {

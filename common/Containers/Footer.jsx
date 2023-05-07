@@ -2,11 +2,32 @@ import React from 'react'
 import styles from "../../styles/footer.module.css"
 import Logo from '../Components/Logo'
 import { footerContactLinks, footerFollowLinks, footerNavLinks } from '../Constants/footerConts'
+import { BsEnvelopeOpen } from 'react-icons/bs'
 
 const Footer = () => {
   return (
     <>
       <footer id='footer' className={styles.footer}>
+        <div className={styles.newsletter}>
+          <h4>Prihlásiť sa na odber noviniek</h4>
+          <form>
+            <div className={styles.newsletter_div}>
+              <BsEnvelopeOpen className={styles.newsletter_envelope} />
+              <input 
+                type="email"
+                placeholder='Váš Email'
+                className={styles.newsletter_email}
+              />
+              <input 
+                type="submit" 
+                value="Prihlásiť sa"
+                className={styles.newsletter_submit}
+              />
+            </div>
+          </form>
+        </div>
+
+
         <div className={styles.footer_wrap}>
           <div className={styles.footer_left_side}>
             <Logo />
@@ -56,9 +77,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    
-    
-    
     </>
   )
 }
