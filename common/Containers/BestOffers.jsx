@@ -1,6 +1,9 @@
 import styles from "../../styles/bestoffers.module.css"
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { HiLocationMarker } from "react-icons/hi"
+import { GiHomeGarage } from "react-icons/gi"
+import { BiTimeFive } from "react-icons/bi"
 
 // Import Swiper styles
 import "swiper/css";
@@ -25,7 +28,7 @@ const BestOffers = () => {
 
         <a href="#">
           Pozrieť všetky ponuky
-          <MdOutlineKeyboardArrowRight />
+          <MdOutlineKeyboardArrowRight size={22} />
         </a>
       </div>
 
@@ -57,32 +60,32 @@ const BestOffers = () => {
                 <div className={styles.offer_bottom_part}>
                   <h3>{swipe.propertyName}</h3>
                   <div className={styles.offer_location}>
-                   <HiLocationMarker />
+                   <HiLocationMarker color="#1727A2" />
                    <p>{swipe.propertyLocation}</p>
                   </div>
 
                   <div className={styles.divider}></div>
 
-                  <div className={styles.offer_stats_row}>
+                  <div className={styles.offer_stats_row} style={{ marginBottom: '1rem' }}>
                     <div className={styles.offer_left}>
-                      <HiLocationMarker />
+                      <HiLocationMarker color="#1727A2" />
                       <p>{swipe.measure}</p>
                     </div>
                     
                     <div className={styles.offer_right}>
-                      <GiHomeGarage />
+                      <GiHomeGarage color="#1727A2" />
                       <p>{swipe.garage}</p>
                     </div>
                   </div>
 
                   <div className={styles.offer_stats_row}>
                     <div className={styles.offer_left}>
-                      <FaBed />
+                      <FaBed color="#1727A2" />
                       <p>{swipe.bedroom}</p>
                     </div>
                     
                     <div className={styles.offer_right}>
-                      <FaBath />
+                      <FaBath color="#1727A2" />
                       <p>{swipe.bathroom}</p>
                     </div>
                   </div>
@@ -91,12 +94,12 @@ const BestOffers = () => {
                   
                   <div className={styles.offer_stats_row}>
                     <div className={styles.offer_left}>
-                      <AiOutlineUser />
+                      <AiOutlineUser color="#1727A2" />
                       <p>{swipe.owner}</p>
                     </div>
                     
                     <div className={styles.offer_right}>
-                      <BiTimeFive />
+                      <BiTimeFive color="#1727A2" />
                       <p>{swipe.time}</p>
                     </div>
                   </div>
