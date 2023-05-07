@@ -10,6 +10,8 @@ import { Pagination, Navigation } from "swiper";
 import { offersValue } from "../Constants/bestOffersConts";
 import Heading from "../Components/Heading";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { FaBath, FaBed } from "react-icons/fa";
+import { AiOutlineUser } from "react-icons/ai";
 
 const BestOffers = () => {
   return (
@@ -56,16 +58,52 @@ const BestOffers = () => {
                   <h3>{swipe.propertyName}</h3>
                   <div className={styles.offer_location}>
                    <HiLocationMarker />
-                   {swipe.propertyLocation}
+                   <p>{swipe.propertyLocation}</p>
                   </div>
 
                   <div className={styles.divider}></div>
 
                   <div className={styles.offer_stats_row}>
                     <div className={styles.offer_left}>
-                      
+                      <HiLocationMarker />
+                      <p>{swipe.measure}</p>
+                    </div>
+                    
+                    <div className={styles.offer_right}>
+                      <GiHomeGarage />
+                      <p>{swipe.garage}</p>
                     </div>
                   </div>
+
+                  <div className={styles.offer_stats_row}>
+                    <div className={styles.offer_left}>
+                      <FaBed />
+                      <p>{swipe.bedroom}</p>
+                    </div>
+                    
+                    <div className={styles.offer_right}>
+                      <FaBath />
+                      <p>{swipe.bathroom}</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.divider}></div>
+                  
+                  <div className={styles.offer_stats_row}>
+                    <div className={styles.offer_left}>
+                      <AiOutlineUser />
+                      <p>{swipe.owner}</p>
+                    </div>
+                    
+                    <div className={styles.offer_right}>
+                      <BiTimeFive />
+                      <p>{swipe.time}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.offer_price}>
+                  <p>{swipe.price}</p>
                 </div>
               </div>
             </SwiperSlide>
