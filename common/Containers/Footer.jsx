@@ -3,11 +3,13 @@ import styles from "../../styles/footer.module.css"
 import Logo from '../Components/Logo'
 import { footerContactLinks, footerFollowLinks, footerNavLinks } from '../Constants/footerConts'
 import { BsEnvelopeOpen } from 'react-icons/bs'
+import { MdKeyboardArrowUp } from 'react-icons/md'
 
 const Footer = () => {
   return (
     <>
       <footer id='footer' className={styles.footer}>
+
         <div className={styles.newsletter}>
           <h4>Prihlásiť sa na odber noviniek</h4>
           <form>
@@ -73,6 +75,29 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+
+          <div className={styles.footer_bottom}>
+            <div className={styles.footer_bottom_wrap}>
+
+            <div className={styles.footer_bottom_left}>
+              <ul>
+                <li><a href="#">Bezpečná platba</a></li>
+                <li><a href="#">Zásady ochrany</a></li>
+                <li><a href="#">Osobné údaje</a></li>
+                <li><a href="#">GDPR</a></li>
+              </ul>
+            </div>
+
+            <div className={styles.footer_bottom_right}>
+              <p className={styles.footer_copy}>&copy; 2023 Dávid Roman</p>
+
+              <a href="#header">
+                ísť hore
+                <MdKeyboardArrowUp />
+              </a>
             </div>
           </div>
         </div>
