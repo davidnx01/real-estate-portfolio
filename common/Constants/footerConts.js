@@ -36,15 +36,15 @@ export const footerContactLinks = [
 
 export const footerFollowLinks = [
     {
-        linkIcon: <RxLinkedinLogo />, idIcon: "www.linkedin.com"
+        linkIcon: <RxLinkedinLogo size={24} />, idIcon: "www.linkedin.com"
     },
     {
-        linkIcon: <RiFacebookFill />, idIcon: "www.facebook.sk"
+        linkIcon: <RiFacebookFill size={24} />, idIcon: "www.facebook.sk"
     },
     {
-        linkIcon: <RiInstagramFill />, idIcon: "www.instagram.com"
+        linkIcon: <RiInstagramFill size={24} />, idIcon: "www.instagram.com"
     },
     {
-        linkIcon: <FaTwitter />, idIcon: "www.twitter.com"
+        linkIcon: <FaTwitter size={24} />, idIcon: "www.twitter.com"
     },
 ]

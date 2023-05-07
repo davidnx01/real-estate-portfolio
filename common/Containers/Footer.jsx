@@ -6,11 +6,11 @@ import { footerContactLinks, footerFollowLinks, footerNavLinks } from '../Consta
 const Footer = () => {
   return (
     <>
-      <footer id='footer'>
+      <footer id='footer' className={styles.footer}>
         <div className={styles.footer_wrap}>
           <div className={styles.footer_left_side}>
             <Logo />
-            <p>
+            <p className={styles.footer_description}>
               Sme realitná kancelária poskytujúca služby 
               v oblasti kúpy, predaja a prenájmu nehnuteľností. 
               Prehľadajte našu webovú stránku pre viac informácií.
@@ -33,7 +33,7 @@ const Footer = () => {
               <h4>Kontakt</h4>
               <ul>
                 {footerContactLinks.map((link) => (
-                  <li key={link.info}>
+                  <li key={link.info} className={styles.contact_li}>
                     {link.infoIcon}
                     <p>{link.infoText}</p>
                   </li>
@@ -42,8 +42,8 @@ const Footer = () => {
             </div>
 
             <div className="footer_right_side_list">
-              <h4>Odkazy</h4>
-              <ul>
+              <h4>Sledujte nás na</h4>
+              <ul className={styles.follow_wrap}>
                 {footerFollowLinks.map((link) => (
                   <li>
                     <a href={link.idIcon}>
