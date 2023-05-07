@@ -57,6 +57,11 @@ section {
     margin-top: 7.5rem;
 }
 
+main {
+    margin-top: 7.5rem;
+    padding-left: 1rem;
+}
+
 #wrapper {
     max-width: 1920px;
     margin-inline: auto;
